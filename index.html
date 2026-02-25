@@ -13,11 +13,28 @@
         <a href="album.html" class="button">Download album</a>
         <a href="https://leto08.bandcamp.com/" class="button" target="_blank">BANDCAMP LINK</a>
     </div>
-    <audio src="album1/track1.wav" autoplay controls loop></audio>
+    <audio id="bgm" src="album1/track1." autoplay controls loop></audio>
+    <button id="player" onclick="toggleMusic()">⏸</button>
 
     <footer>
     © 2026 PCA1080
     </footer>
+    
+    <script>
 
+        const audio = document.getElementById("bgm");
+        const button = document.getElementById("player");
+
+        function toggleMusic() {
+            if (audio.paused) {
+                audio.play();
+                button.textContent = "⏸";
+            } else {
+                audio
+                    audio.pause();
+                    button.textContent = "▶";
+            }
+        }
+    </script>
 </body>
 </html>
